@@ -1,0 +1,131 @@
+<footer class="footer">
+  <div class="footer__body">
+    <div class="footer__links">
+      <div class="footer__services">
+        <h3>Услуги</h3>
+        <a href="#">Охранная сигнализация</a>
+        <a href="#">Тревожная сигнализация</a>
+        <a href="#">Пожарная безопасность</a>
+        <a href="#">Системы видеонаблюдения</a>
+        <a href="#">Физическая охрана</a>
+        <a href="#">Диспетчеризация</a>
+        <a href="#">Система СКУД</a>
+
+        <button>Написать в WhatsApp</button>
+      </div>
+      <div class="other">
+        <h3>Прочее</h3>
+        <a href="#">О компании</a>
+        <a href="#">Вопросы</a>
+        <a href="#">Контакты</a>
+        <a href="#">Вакансии</a>
+
+        <div class="contact">
+          <h3>Связаться</h3>
+          <p>+7 383 258-33-00</p>
+          <p>info@block54.ru</p>
+        </div>
+      </div>
+    </div>
+    <form class="footer__form">
+      <h1>Мы можем связаться с вами</h1>
+      <div class="footer__form-body">
+        <div class="form__name">
+          <label for="name">Ваше имя*</label>
+          <input type="text" name="name"/>
+        </div>
+        <div class="form__type-question">
+          <label for="type-question">Тип вопроса</label>
+          <select class="type-question">
+            <option type="consl">Мне нужна консультация</option>
+            <option type="consl">Мне нужна консультация</option>
+            <option type="consl">Мне нужна консультация</option>
+          </select>
+        </div>
+        <div class="form__phone">
+          <label for="tel">Телефон*</label>
+          <input type="tel" placeholder="+7" />
+        </div>
+        <div class="form__inpt-call">
+          <label for="call">Удобное время для звонка</label>
+          <select class="call">
+            <option type="now">Сейчас</option>
+            <option type="later">Позже</option>
+          </select>
+        </div>
+        <p>* - обязательное поле</p>
+      </div>
+      <div class="footer__btn">
+        <button type="submit">Отправить</button>
+        <p>
+          Нажимая «Отправить» вы соглашаетесь с обработкой персональных
+          данных
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="footer_foot">
+    <p>©2022 Блок 54. Все авторские права защищены</p>
+    <a href="https://block54.ru/politika-konfidencialnosti/"
+      >Политика конфендициальности</a
+    >
+    <div class="foot_socials">
+      <img src="../images/src/inst.svg" alt="icon" />
+      <img src="../images/src/vk.svg" alt="icon" />
+      <img src="../images/src/facebook.svg" alt="icon" />
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="app/js/script.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 16,
+      // centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+       },
+       breakpoints: {
+        0:{
+          slidePerViiew: 1,
+        },
+        360: {
+          slidesPerView: 1,
+        },
+        580: {
+          slidesPerView: 1,
+        },
+        678: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  
+   const openMenu = document.querySelectorAll(".row");
+    const closeMenu = document.querySelector(".close");
+    const mobileMenu = document.querySelector(".header__mob-menu");
+
+
+    openMenu.forEach((row) => {
+      row.addEventListener('click', () => {
+  
+        if(mobileMenu.style.display === 'block'){
+          mobileMenu.style.display = 'none';
+        }else{
+          mobileMenu.style.display = 'block';
+        }
+      
+      })
+    });
+  </script>
+</body>
+</html>
